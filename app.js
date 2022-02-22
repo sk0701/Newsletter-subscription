@@ -28,11 +28,11 @@ app.post("/", function(req, res) {
     }]
   };
   const jsonData = JSON.stringify(data);
-  const url = "https://us14.api.mailchimp.com/3.0/lists/bcd3d3b013";
+  const url = "https://us14.api.mailchimp.com/3.0/lists/.  "; /* replace .  list id*/
 
   const options = {
     method: "POST",
-    auth: "sarthak:5f3ec774d4cd84eab8e3a947e0f83f20-us14"
+    auth: /*set authentaticion */
   }
   const request = https.request(url, options, function(response) {
     if (response.statusCode === 200) {
@@ -58,5 +58,4 @@ app.listen(process.env.PORT||3000, function() {
 });
 //api key
 //  5f3ec774d4cd84eab8e3a947e0f83f20-us14
-//aud id
-//bcd3d3b013
+
